@@ -24,7 +24,7 @@ gulp.task('sass-it', function(){
   return gulp.src(sassPath)
   .pipe(sass())
   .pipe(gulp.dest('./app/css'))
-  .pipe(browserSync.reload({
+  .pipe(sync.reload({
     stream: true
   }));
 });
@@ -43,6 +43,7 @@ gulp.task('transpile', function() {
 });
 
 gulp.task('watch-it',['serve', 'sass-it'], function(){
+  gulp.watch('app/scss/**/*.scss', ['sass-it']);
   gulp.watch('src/js/**/*.js', ['transpile']);
   gulp.watch('app/index.html', sync.reload);
 });

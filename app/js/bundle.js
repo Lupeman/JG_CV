@@ -20489,6 +20489,54 @@ arguments[4][152][0].apply(exports,arguments)
 module.exports = require('./lib/React');
 
 },{"./lib/React":155}],179:[function(require,module,exports){
+'use strict';
+
+var React = require('react');
+var Superhero = require('./Superhero');
+var Personal_statement = require('./Personal_statement');
+
+var About_me = React.createClass({
+  displayName: 'About_me',
+
+  render: function render() {
+    return React.createElement(
+      'div',
+      { className: 'about_me_container' },
+      React.createElement(Superhero, null),
+      React.createElement(Personal_statement, null)
+    );
+  }
+});
+
+module.exports = About_me;
+
+},{"./Personal_statement":184,"./Superhero":185,"react":178}],180:[function(require,module,exports){
+'use strict';
+
+var React = require('react');
+var Contact_details = require('./Contact_details');
+var Name_header = require('./Name_header');
+var About_me = require('./About_me');
+var Work_experience = require('./Work_experience');
+
+var App = React.createClass({
+  displayName: 'App',
+
+  render: function render() {
+    return React.createElement(
+      'div',
+      { className: 'main_container' },
+      React.createElement(Name_header, null),
+      React.createElement(Contact_details, null),
+      React.createElement(About_me, null),
+      React.createElement(Work_experience, null)
+    );
+  }
+});
+
+module.exports = App;
+
+},{"./About_me":179,"./Contact_details":181,"./Name_header":183,"./Work_experience":186,"react":178}],181:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20499,93 +20547,105 @@ var Contact_details = React.createClass({
   render: function render() {
     return React.createElement(
       "div",
-      { "class": "col-md-5" },
+      { className: "contact_details_container" },
       React.createElement(
         "div",
-        { "class": "row" },
+        null,
         React.createElement(
-          "div",
-          { "class": "col-md-12" },
-          React.createElement(
-            "p",
-            { "class": "forHire" },
-            "Available for hire"
-          )
+          "p",
+          { className: "forHire" },
+          "Available for hire"
         )
       ),
       React.createElement(
         "div",
-        { "class": "row website" },
+        { className: "contact_details" },
         React.createElement(
           "div",
-          { "class": "col-md-2" },
-          React.createElement("img", { id: "website", src: "images/browser.png", alt: "browser icon" })
-        ),
-        React.createElement(
-          "div",
-          { "class": "col-md-10" },
+          { className: "website" },
           React.createElement(
-            "h4",
-            null,
-            "Website"
-          ),
-          React.createElement(
-            "p",
+            "ul",
             null,
             React.createElement(
-              "a",
-              { href: "http://www.jaimegunther.com" },
-              "www.jaimegunther.com"
+              "li",
+              null,
+              React.createElement("img", { id: "website", src: "images/browser.png", alt: "browser icon" })
+            ),
+            React.createElement(
+              "li",
+              null,
+              React.createElement(
+                "h4",
+                null,
+                "Website"
+              ),
+              React.createElement(
+                "p",
+                null,
+                React.createElement(
+                  "a",
+                  { href: "http://www.jaimegunther.com" },
+                  "www.jaimegunther.com"
+                )
+              )
             )
           )
-        )
-      ),
-      React.createElement(
-        "div",
-        { "class": "row mobile" },
-        React.createElement(
-          "div",
-          { "class": "col-md-2" },
-          React.createElement("img", { id: "mobile", src: "images/mobile.png", alt: "mobile icon" })
         ),
         React.createElement(
           "div",
-          { "class": "col-md-10" },
+          { className: "mobile" },
           React.createElement(
-            "h4",
-            null,
-            "Mobile Number"
-          ),
-          React.createElement(
-            "p",
-            null,
-            "0406 052 463"
-          )
-        )
-      ),
-      React.createElement(
-        "div",
-        { "class": "row email" },
-        React.createElement(
-          "div",
-          { "class": "col-md-2" },
-          React.createElement("img", { id: "email", src: "images/email.png", alt: "email icon" })
-        ),
-        React.createElement(
-          "div",
-          { "class": "col-md-10" },
-          React.createElement(
-            "h4",
-            null,
-            "Email Address"
-          ),
-          React.createElement(
-            "p",
+            "ul",
             null,
             React.createElement(
-              "a",
-              { href: "mailto:jaimegunther@hotmail.com" },
-              "jaimegunther@hotmail.com"
+              "li",
+              null,
+              React.createElement("img", { id: "mobile", src: "images/mobile.png", alt: "mobile icon" })
+            ),
+            React.createElement(
+              "li",
+              null,
+              React.createElement(
+                "h4",
+                null,
+                "Mobile Number"
+              ),
+              React.createElement(
+                "p",
+                null,
+                "0406 052 463"
+              )
+            )
+          )
+        ),
+        React.createElement(
+          "div",
+          { className: "email" },
+          React.createElement(
+            "ul",
+            null,
+            React.createElement(
+              "li",
+              null,
+              React.createElement("img", { id: "email", src: "images/email.png", alt: "email icon" })
+            ),
+            React.createElement(
+              "li",
+              null,
+              React.createElement(
+                "h4",
+                null,
+                "Email Address"
+              ),
+              React.createElement(
+                "p",
+                null,
+                React.createElement(
+                  "a",
+                  { href: "mailto:jaimegunther@hotmail.com" },
+                  "jaimegunther@hotmail.com"
+                )
+              )
             )
           )
         )
@@ -20596,27 +20656,97 @@ var Contact_details = React.createClass({
 
 module.exports = Contact_details;
 
-},{"react":178}],180:[function(require,module,exports){
-'use strict';
+},{"react":178}],182:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+
+var Job_msd = React.createClass({
+  displayName: "Job_msd",
+
+  render: function render() {
+    return React.createElement(
+      "div",
+      { className: "job_msd_container" },
+      React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "h4",
+          null,
+          "MSD"
+        ),
+        React.createElement(
+          "p",
+          { className: "job_stats" },
+          "Sales Representative"
+        ),
+        React.createElement(
+          "p",
+          { className: "job_stats" },
+          "April 2010 - November 2016"
+        )
+      ),
+      React.createElement(
+        "div",
+        null,
+        React.createElement(
+          "p",
+          null,
+          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+        ),
+        React.createElement(
+          "ul",
+          null,
+          React.createElement(
+            "li",
+            null,
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor."
+          ),
+          React.createElement(
+            "li",
+            null,
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor."
+          ),
+          React.createElement(
+            "li",
+            null,
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor."
+          ),
+          React.createElement(
+            "li",
+            null,
+            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor."
+          )
+        )
+      )
+    );
+  }
+});
+
+module.exports = Job_msd;
+
+},{"react":178}],183:[function(require,module,exports){
+"use strict";
 
 var React = require('react');
 
 var Name_header = React.createClass({
-  displayName: 'Name_header',
+  displayName: "Name_header",
 
   render: function render() {
     return React.createElement(
-      'div',
-      null,
+      "div",
+      { className: "name_header_container" },
       React.createElement(
-        'h1',
+        "h1",
         null,
-        'Jaime Gunther'
+        "Jaime Gunther"
       ),
       React.createElement(
-        'p',
+        "p",
         null,
-        'Front End Web Developer'
+        "Front End Web Developer"
       )
     );
   }
@@ -20624,14 +20754,91 @@ var Name_header = React.createClass({
 
 module.exports = Name_header;
 
-},{"react":178}],181:[function(require,module,exports){
+},{"react":178}],184:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+
+var Personal_statement = React.createClass({
+  displayName: "Personal_statement",
+
+  render: function render() {
+    return React.createElement(
+      "div",
+      { className: "personal_statement_container" },
+      React.createElement(
+        "p",
+        null,
+        React.createElement(
+          "span",
+          null,
+          "\u201CI'm"
+        ),
+        " curious. I love a challenge. I'm great with change and adapt easily. Always learning something new. I really love to code!"
+      ),
+      React.createElement(
+        "p",
+        null,
+        "Honestly there's a lot more to me than that! But it's the combination of those attributes that I think will help me grow as a junior dev. Capable in backend technology, I have a definite passison for the front end. I enjoy being able to use my analytical and technical sensibilities to bring to life a visual and creative idea."
+      ),
+      React.createElement(
+        "p",
+        null,
+        "Alongside my technical skills, I think my many and diverse life experiences have contributed to my being a fun and respected member of the varied teams I have been a part of. Importantly, I have learned the skills needed for working as part of a cohesive and productive environment, including empathy, humility, supportiveness and a willingness to accept and learn from mistakes. Particularly important as a junior dev!\u201D"
+      )
+    );
+  }
+});
+
+module.exports = Personal_statement;
+
+},{"react":178}],185:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+
+var Superhero = React.createClass({
+  displayName: "Superhero",
+
+  render: function render() {
+    return React.createElement(
+      "div",
+      { className: "superhero_container" },
+      React.createElement("img", { className: "cape", src: "images/cape.png", alt: "superhero cape" }),
+      React.createElement("img", { className: "superhero", src: "images/superhero.png", alt: "superhero image" })
+    );
+  }
+});
+
+module.exports = Superhero;
+
+},{"react":178}],186:[function(require,module,exports){
+'use strict';
+
+var React = require('react');
+var Job_msd = require('./Job_msd');
+
+var Work_experience = React.createClass({
+  displayName: 'Work_experience',
+
+  render: function render() {
+    return React.createElement(
+      'div',
+      { className: 'work_experience_container' },
+      React.createElement(Job_msd, null)
+    );
+  }
+});
+
+module.exports = Work_experience;
+
+},{"./Job_msd":182,"react":178}],187:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
 var ReactDOM = require('react-dom');
-var Contact_details = require('./Contact_details');
-var Name_header = require('./Name_header');
+var App = require('./App');
 
-ReactDOM.render(React.createElement(Contact_details, null), document.getElementById('root'));
+ReactDOM.render(React.createElement(App, null), document.getElementById('root'));
 
-},{"./Contact_details":179,"./Name_header":180,"react":178,"react-dom":25}]},{},[181]);
+},{"./App":180,"react":178,"react-dom":25}]},{},[187]);
