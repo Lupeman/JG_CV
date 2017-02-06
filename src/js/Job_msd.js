@@ -3,11 +3,7 @@ var React = require('react');
 var Job_msd = React.createClass({
   render: function(){
     return (
-      <div id="job_msd_container" className="job_container" {
-        constructor() {
-
-        }
-      }>
+      <div className="job_msd_container">
         <table>
           <tr>
             <td>
@@ -17,7 +13,7 @@ var Job_msd = React.createClass({
             </td>
             <td>
               <p>
-              As a sales representative with MSD I aided in the launch of two new products on the territory, which I managed. Working with my territory counterparts, I promoted and facilitated Webinars, evening meetings and events. I am able to engage in technical product discussions and maintain ongoing professional relationships with clients.
+                Independently managed a large territory of approximately 300 clients to ensure they were provided with accurate and up-to-date product information. I successfully launched two new products to market, worked with territory teammates to promote, organise and run Webinars, evening meetings and events on various topics within the industry.
               </p>
             </td>
           </tr>

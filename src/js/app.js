@@ -8,8 +8,8 @@ var App = React.createClass({
   render: function(){
     return (
       <div className="main_container">
-        <Name_header />
         <Contact_details />
+        <Name_header />
         <About_me />
         <Work_experience />
       </div>

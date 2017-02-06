@@ -20502,7 +20502,6 @@ var About_me = React.createClass({
     return React.createElement(
       'div',
       { className: 'about_me_container' },
-      React.createElement(Superhero, null),
       React.createElement(Personal_statement, null)
     );
   }
@@ -20526,8 +20525,8 @@ var App = React.createClass({
     return React.createElement(
       'div',
       { className: 'main_container' },
-      React.createElement(Name_header, null),
       React.createElement(Contact_details, null),
+      React.createElement(Name_header, null),
       React.createElement(About_me, null),
       React.createElement(Work_experience, null)
     );
@@ -20550,101 +20549,73 @@ var Contact_details = React.createClass({
       { className: "contact_details_container" },
       React.createElement(
         "div",
-        null,
+        { className: "website" },
         React.createElement(
-          "p",
-          { className: "forHire" },
-          "Available for hire"
+          "ul",
+          null,
+          React.createElement(
+            "li",
+            null,
+            React.createElement("img", { id: "website", src: "images/browser.png", alt: "portfolio_site_icon" })
+          ),
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              "p",
+              null,
+              React.createElement(
+                "a",
+                { href: "http://www.jaimegunther.com" },
+                "www.jaimegunther.com"
+              )
+            )
+          )
         )
       ),
       React.createElement(
         "div",
-        { className: "contact_details" },
+        { className: "mobile" },
         React.createElement(
-          "div",
-          { className: "website" },
+          "ul",
+          null,
           React.createElement(
-            "ul",
+            "li",
+            null,
+            React.createElement("img", { id: "mobile", src: "images/mobile.png", alt: "mobile_contact_icon" })
+          ),
+          React.createElement(
+            "li",
             null,
             React.createElement(
-              "li",
+              "p",
               null,
-              React.createElement("img", { id: "website", src: "images/browser.png", alt: "browser icon" })
-            ),
-            React.createElement(
-              "li",
-              null,
-              React.createElement(
-                "h4",
-                null,
-                "Website"
-              ),
-              React.createElement(
-                "p",
-                null,
-                React.createElement(
-                  "a",
-                  { href: "http://www.jaimegunther.com" },
-                  "www.jaimegunther.com"
-                )
-              )
+              "0406 052 463"
             )
           )
-        ),
+        )
+      ),
+      React.createElement(
+        "div",
+        { className: "email" },
         React.createElement(
-          "div",
-          { className: "mobile" },
+          "ul",
+          null,
           React.createElement(
-            "ul",
+            "li",
+            null,
+            React.createElement("img", { id: "email", src: "images/email.png", alt: "email icon" })
+          ),
+          React.createElement(
+            "li",
             null,
             React.createElement(
-              "li",
-              null,
-              React.createElement("img", { id: "mobile", src: "images/mobile.png", alt: "mobile icon" })
-            ),
-            React.createElement(
-              "li",
+              "p",
               null,
               React.createElement(
-                "h4",
-                null,
-                "Mobile Number"
-              ),
-              React.createElement(
-                "p",
-                null,
-                "0406 052 463"
-              )
-            )
-          )
-        ),
-        React.createElement(
-          "div",
-          { className: "email" },
-          React.createElement(
-            "ul",
-            null,
-            React.createElement(
-              "li",
-              null,
-              React.createElement("img", { id: "email", src: "images/email.png", alt: "email icon" })
-            ),
-            React.createElement(
-              "li",
-              null,
-              React.createElement(
-                "h4",
-                null,
-                "Email Address"
-              ),
-              React.createElement(
-                "p",
-                null,
-                React.createElement(
-                  "a",
-                  { href: "mailto:jaimegunther@hotmail.com" },
-                  "jaimegunther@hotmail.com"
-                )
+                "a",
+                { href: "mailto:jaimegunther@hotmail.com" },
+                "jaimegunther@hotmail.com"
               )
             )
           )
@@ -20699,7 +20670,7 @@ var Job_msd = React.createClass({
             React.createElement(
               "p",
               null,
-              "As a sales representative with MSD I aided in the launch of two new products on the territory, which I managed. Working with my territory counterparts, I promoted and facilitated Webinars, evening meetings and events. I am able to engage in technical product discussions and maintain ongoing professional relationships with clients."
+              "Independently managed a large territory of approximately 300 clients to ensure they were provided with accurate and up-to-date product information. I successfully launched two new products to market, worked with territory teammates to promote, organise and run Webinars, evening meetings and events on various topics within the industry."
             )
           )
         )
@@ -20721,7 +20692,7 @@ var Job_out_and_about_dogs = React.createClass({
   render: function render() {
     return React.createElement(
       "div",
-      { className: "job_out_and_about_dogs_container" },
+      { id: "job_out_and_about_dogs_container", className: "job_container" },
       React.createElement(
         "table",
         null,
@@ -20804,20 +20775,31 @@ var Personal_statement = React.createClass({
     return React.createElement(
       "div",
       { className: "personal_statement_container" },
+      "// ",
+      React.createElement("div", { className: "circle" }),
+      React.createElement("img", { className: "image", src: "/images/woman3.png" }),
       React.createElement(
-        "p",
-        null,
+        "div",
+        { className: "quote" },
         React.createElement(
-          "span",
+          "p",
           null,
-          "\u201CC"
-        ),
-        "urrently in my final week of the Web Development Immersive Program, I have recently made the all important leap into pursuing my passion for coding full-time. Throughout my diverse career, I have been able to take from each pursuit a new skill set. I am a confident, inquisitive, kind and determined individual always striving to learn something new and see how it can be applied. My interest in learning is what lead me to coding - as I was looking for another way to challenge myself. It has also taught me that there is always more to know and many experienced people out there, who can help teach, mould and advise."
+          "\u201CI am an ideas person new to the development world and as such looking for a team to help guide me, in exchange so that I might provide meaningful content.\u201D"
+        )
       ),
       React.createElement(
-        "p",
-        null,
-        "I have spoken to crowds, engaged in technical discussions with physicians, lead groups and fostered others, managed a business and created a successful brand. I live my life to the motto of \u201CWhy not?\u201D and believe that pragmatism and a sense of adventure can dynamically coexist. My creativity spurs me to constantly be thinking of new ideas and ways to bring them to life. I am an ideas person new to the development world and as such looking for a team to help guide me, in exchange so that I might provide meaningful content.\u201D"
+        "div",
+        { className: "body-text" },
+        React.createElement(
+          "p",
+          null,
+          "A graduate of the Web Development Immersive Program, I have recently made the all important leap into pursuing my passion for coding full-time. Throughout my diverse career, I have been able to take from each pursuit a new skill set. I am a confident, inquisitive, kind and determined individual always striving to learn something new and see how it can be applied. My interest in learning is what lead me to coding - as I was looking for another way to challenge myself. It has also taught me that there is always more to know and many experienced people out there, who can help teach, mould and advise."
+        ),
+        React.createElement(
+          "p",
+          null,
+          "I have spoken to crowds, engaged in technical discussions with physicians, lead groups and fostered others, managed a business and created a successful brand. I live my life to the motto of \u201CWhy not?\u201D and believe that pragmatism and a sense of adventure can dynamically coexist. My creativity spurs me to constantly be thinking of new ideas and ways to bring them to life."
+        )
       )
     );
   }

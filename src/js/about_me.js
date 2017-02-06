@@ -7,7 +7,6 @@ var About_me = React.createClass({
   render: function(){
     return (
       <div className="about_me_container">
-        <Superhero />
         <Personal_statement />
       </div>
     );
