@@ -11,19 +11,27 @@ html, body {
 
 .name_header_container {
   width: 70%;
-  height: 200px;
-  margin-top: -30px; }
+  height: 200px; }
+
+.hanging_sign {
+  height: 500px;
+  width: auto;
+  margin-top: -180px;
+  position: relative;
+  z-index: -10;
+  margin-left: -50px; }
 
 .name_header_container h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 60px;
+  font-size: 55px;
   font-weight: bold; }
 
 .name_header_container p {
-  font-size: 35px;
+  font-size: 28px;
   text-transform: uppercase;
   font-weight: bold;
-  padding-bottom: 10px;
+  margin-top: -30px;
+  padding-bottom: 20px;
   border-bottom: 2px solid #000000; }
 
 .contact_details_container {
@@ -108,7 +116,7 @@ div.contact_details ul li {
 .about_me_container {
   display: flex;
   flex-wrap: wrap;
-  margin-top: -300px; }
+  margin-top: -290px; }
 
 .superhero_container {
   display: flex;
@@ -117,13 +125,14 @@ div.contact_details ul li {
 .superhero {
   height: 230px;
   width: auto;
-  margin-left: -45px; }
+  margin-left: -45px;
+  padding-right: 35px; }
 
 .cape {
   height: 90px;
   width: auto;
   position: relative;
-  z-index: -3;
+  z-index: -10;
   animation: wind 15s ease-in-out infinite, size 20s ease-in-out infinite, flickr 5s ease-in-out infinite;
   transform-origin: 50% 100%;
   margin-top: 55px; }
@@ -145,7 +154,10 @@ div.contact_details ul li {
   width: 50%;
   flex-wrap: wrap;
   padding: 0 20px;
-  border-bottom: 1px solid #000000; }
+  border-bottom: 1px solid #000000;
+  background-color: #ffdd1b;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px; }
 
 .personal_statement_container p {
   text-align: justify;
@@ -157,15 +169,21 @@ div.contact_details ul li {
   font-size: 40px;
   display: inline-block; }
 
-.job_msd_container {
+.work_experience_container {
+  width: 50%; }
+
+td {
+  width: 30%; }
+
+#job_msd_container {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
   width: 70%; }
 
-.job_msd_container h4 {
+#job_msd_container h4 {
   font-size: 30px;
   margin: 0; }
 
-.job_msd_container .job_stats {
+#job_msd_container .job_stats {
   font-weight: bold; }

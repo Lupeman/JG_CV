@@ -20510,7 +20510,7 @@ var About_me = React.createClass({
 
 module.exports = About_me;
 
-},{"./Personal_statement":184,"./Superhero":185,"react":178}],180:[function(require,module,exports){
+},{"./Personal_statement":185,"./Superhero":186,"react":178}],180:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -20536,7 +20536,7 @@ var App = React.createClass({
 
 module.exports = App;
 
-},{"./About_me":179,"./Contact_details":181,"./Name_header":183,"./Work_experience":186,"react":178}],181:[function(require,module,exports){
+},{"./About_me":179,"./Contact_details":181,"./Name_header":184,"./Work_experience":187,"react":178}],181:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20669,54 +20669,38 @@ var Job_msd = React.createClass({
       "div",
       { className: "job_msd_container" },
       React.createElement(
-        "div",
+        "table",
         null,
         React.createElement(
-          "h4",
-          null,
-          "MSD"
-        ),
-        React.createElement(
-          "p",
-          { className: "job_stats" },
-          "Sales Representative"
-        ),
-        React.createElement(
-          "p",
-          { className: "job_stats" },
-          "April 2010 - November 2016"
-        )
-      ),
-      React.createElement(
-        "div",
-        null,
-        React.createElement(
-          "p",
-          null,
-          "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-        ),
-        React.createElement(
-          "ul",
+          "tr",
           null,
           React.createElement(
-            "li",
+            "td",
             null,
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor."
+            React.createElement(
+              "h4",
+              null,
+              "MSD"
+            ),
+            React.createElement(
+              "p",
+              { className: "job_stats" },
+              "Sales Representative"
+            ),
+            React.createElement(
+              "p",
+              { className: "job_stats" },
+              "April 2010 - November 2016"
+            )
           ),
           React.createElement(
-            "li",
+            "td",
             null,
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor."
-          ),
-          React.createElement(
-            "li",
-            null,
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor."
-          ),
-          React.createElement(
-            "li",
-            null,
-            "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor."
+            React.createElement(
+              "p",
+              null,
+              "As a sales representative with MSD I aided in the launch of two new products on the territory, which I managed. Working with my territory counterparts, I promoted and facilitated Webinars, evening meetings and events. I am able to engage in technical product discussions and maintain ongoing professional relationships with clients."
+            )
           )
         )
       )
@@ -20727,6 +20711,60 @@ var Job_msd = React.createClass({
 module.exports = Job_msd;
 
 },{"react":178}],183:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+
+var Job_out_and_about_dogs = React.createClass({
+  displayName: "Job_out_and_about_dogs",
+
+  render: function render() {
+    return React.createElement(
+      "div",
+      { className: "job_out_and_about_dogs_container" },
+      React.createElement(
+        "table",
+        null,
+        React.createElement(
+          "tr",
+          null,
+          React.createElement(
+            "td",
+            null,
+            React.createElement(
+              "h4",
+              null,
+              "Out & About Dogs"
+            ),
+            React.createElement(
+              "p",
+              { className: "job_stats" },
+              "Owner"
+            ),
+            React.createElement(
+              "p",
+              { className: "job_stats" },
+              "June 2007 - April 2010"
+            )
+          ),
+          React.createElement(
+            "td",
+            null,
+            React.createElement(
+              "p",
+              null,
+              "Upon my arrival to Australia, I decided to create my own opportunity and started a dog walking and pet minding service. Using my previous experience working with animals and attempting to leverage my creativity and people skills to promote it, over the course of 3 years was able to build a sizeable client base of approximately 120."
+            )
+          )
+        )
+      )
+    );
+  }
+});
+
+module.exports = Job_out_and_about_dogs;
+
+},{"react":178}],184:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20754,7 +20792,7 @@ var Name_header = React.createClass({
 
 module.exports = Name_header;
 
-},{"react":178}],184:[function(require,module,exports){
+},{"react":178}],185:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20772,19 +20810,14 @@ var Personal_statement = React.createClass({
         React.createElement(
           "span",
           null,
-          "\u201CI'm"
+          "\u201CC"
         ),
-        " curious. I love a challenge. I'm great with change and adapt easily. Always learning something new. I really love to code!"
+        "urrently in my final week of the Web Development Immersive Program, I have recently made the all important leap into pursuing my passion for coding full-time. Throughout my diverse career, I have been able to take from each pursuit a new skill set. I am a confident, inquisitive, kind and determined individual always striving to learn something new and see how it can be applied. My interest in learning is what lead me to coding - as I was looking for another way to challenge myself. It has also taught me that there is always more to know and many experienced people out there, who can help teach, mould and advise."
       ),
       React.createElement(
         "p",
         null,
-        "Honestly there's a lot more to me than that! But it's the combination of those attributes that I think will help me grow as a junior dev. Capable in backend technology, I have a definite passison for the front end. I enjoy being able to use my analytical and technical sensibilities to bring to life a visual and creative idea."
-      ),
-      React.createElement(
-        "p",
-        null,
-        "Alongside my technical skills, I think my many and diverse life experiences have contributed to my being a fun and respected member of the varied teams I have been a part of. Importantly, I have learned the skills needed for working as part of a cohesive and productive environment, including empathy, humility, supportiveness and a willingness to accept and learn from mistakes. Particularly important as a junior dev!\u201D"
+        "I have spoken to crowds, engaged in technical discussions with physicians, lead groups and fostered others, managed a business and created a successful brand. I live my life to the motto of \u201CWhy not?\u201D and believe that pragmatism and a sense of adventure can dynamically coexist. My creativity spurs me to constantly be thinking of new ideas and ways to bring them to life. I am an ideas person new to the development world and as such looking for a team to help guide me, in exchange so that I might provide meaningful content.\u201D"
       )
     );
   }
@@ -20792,7 +20825,7 @@ var Personal_statement = React.createClass({
 
 module.exports = Personal_statement;
 
-},{"react":178}],185:[function(require,module,exports){
+},{"react":178}],186:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20812,11 +20845,12 @@ var Superhero = React.createClass({
 
 module.exports = Superhero;
 
-},{"react":178}],186:[function(require,module,exports){
+},{"react":178}],187:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
 var Job_msd = require('./Job_msd');
+var Job_out_and_about_dogs = require('./Job_out_and_about_dogs');
 
 var Work_experience = React.createClass({
   displayName: 'Work_experience',
@@ -20825,14 +20859,15 @@ var Work_experience = React.createClass({
     return React.createElement(
       'div',
       { className: 'work_experience_container' },
-      React.createElement(Job_msd, null)
+      React.createElement(Job_msd, null),
+      React.createElement(Job_out_and_about_dogs, null)
     );
   }
 });
 
 module.exports = Work_experience;
 
-},{"./Job_msd":182,"react":178}],187:[function(require,module,exports){
+},{"./Job_msd":182,"./Job_out_and_about_dogs":183,"react":178}],188:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -20841,4 +20876,4 @@ var App = require('./App');
 
 ReactDOM.render(React.createElement(App, null), document.getElementById('root'));
 
-},{"./App":180,"react":178,"react-dom":25}]},{},[187]);
+},{"./App":180,"react":178,"react-dom":25}]},{},[188]);
