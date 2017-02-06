@@ -3,6 +3,9 @@ var Contact_details = require('./Contact_details');
 var Name_header = require('./Name_header');
 var About_me = require('./About_me');
 var Work_experience = require('./Work_experience');
+var Line = require('./Line');
+var Education = require('./Education');
+var Projects = require('./Projects');
 
 var App = React.createClass({
   render: function(){
@@ -12,6 +15,9 @@ var App = React.createClass({
         <Name_header />
         <About_me />
         <Work_experience />
+        <Line />
+        <Education />
+        <Projects />
       </div>
     );
   }

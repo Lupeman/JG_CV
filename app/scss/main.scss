@@ -6,6 +6,12 @@ html, body {
   margin: 0;
   padding: 20px;
   font-family: 'Raleway', sans-serif;
+  color: #383838;
+  background: #FDF8EF; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#FDF8EF, #ffffff); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#FDF8EF, #ffffff); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#FDF8EF, #ffffff); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#FDF8EF, #ffffff); /* Standard syntax */
 }
 
 .main_container {
@@ -21,15 +27,33 @@ html, body {
   width: 100%;
 }
 
+.contact_details_container a {
+  text-decoration: none;
+  color: #383838;
+}
+
+.contact_details_container a:hover {
+  color: #50d1ee;
+  text-decoration: none;
+}
+
 div.contact_details_container ul li {
   display: inline-block;
   list-style-type: none;
-  text-align: right;
+  text-align: left;
 }
 
 .website ul, .mobile ul, .email ul {
   display: flex;
   justify-content: space-between;
+}
+
+.web_info_content {
+  margin-top: -40px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  justify-content: flex-start;
 }
 
 #website {
@@ -109,7 +133,6 @@ div.contact_details_container ul li {
   }
 }
 
-
 .personal_statement_container {
   display:flex;
   flex-wrap:wrap;
@@ -119,71 +142,173 @@ div.contact_details_container ul li {
   margin: 0 auto;
 }
 
+.image_me {
+  height: 300px;
+  width:auto;
+  border-radius: 8px;
+  margin-left: 150px;
+}
+
 .personal_statement_container .quote {
   font-family: 'Montserrat', sans-serif;
-  font-size: 25px;
+  font-size: 28px;
   font-style: italic;
   width:50%;
   -ms-transform: rotate(-2deg);
   -webkit-transform: rotate(-2deg);
   transform: rotate(-2deg);
   font-family: 'Permanent Marker', cursive;
+  margin-right: 30px;
 }
 
 .personal_statement_container .body-text {
   width:70%;
   margin-top: 20px;
   font-size: 20px;
-
 }
 
-// .circle {
-//   width: 400px;
-// 	height: 400px;
-// 	background: #fbb657;
-// 	-moz-border-radius: 50%;
-// 	-webkit-border-radius: 50%;
-// 	border-radius: 50%;
-//   float: left;
-//   position:absolute;
-// }
+.personal_statement_container .body-text span {
+  font-size: 23px;
+  color: #50d1ee;
+  font-weight: bold;
+}
 
-.image {
-  height: 250px;
+.work_experience {
+  display: flex;
+  flex-wrap: wrap;
+  width: 45%;
+  flex-direction: column;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.work_experience h3, .education_container h3 {
+  font-size: 30px;
+}
+
+.job_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.work_experience_container h4 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.job_stats p {
+  line-height: 15px;
+  padding:5px 0;
+  margin: 0;
+}
+
+.vertical_line_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content:space-between;;
+  padding-left: 40px;
+  width:5%;
+}
+
+.vertical_line {
+  width:8px;
+  height:920px;
+  background-color: #fbb657;
+  margin-top: 20px;
+  margin:0 10px;
+}
+
+.chevron {
+  height:30px;
+  width: auto;
+  margin-left: -12px;
+}
+
+.job_stats, .education_stats {
+  line-height: 20px;
+}
+
+.company_logo {
+  height:60px;
   width:auto;
+  padding: 10px;
 }
-//
-// .work_experience_container {
-//   // display: flex;
-//   width: 50%;
-// }
-//
-// td {
-//  width: 30%;
-// }
-//
-// #job_msd_container {
-//   display: flex;
-//   justify-content: space-between;
-//   padding-top: 20px;
-//   width: 70%;
-// }
-//
-// #job_msd_container h4 {
-//   font-size: 30px;
-//   margin: 0;
-// }
-//
-// #job_msd_container .job_stats {
-//   font-weight: bold;
+
+// .job_blurb {
+//   padding-top: 30px;
+//   text-align: right;
 // }
 
+.education_container {
+  display: flex;
+  width: 45%;
+  flex-direction: column;
+  text-align: left;
+}
 
-//
+.education_container h4 {
+    font-size: 25px;
+    font-weight: bold;
+}
 
+.education_blurb {
+  padding-top: 30px;
+  text-align: left;
+}
 
-//
-// .forHire:hover {
-//
-// }
-//
+.education_stats p {
+  line-height: 15px;
+  padding:5px 0;
+  margin: 0;
+}
+
+.projects_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.projects h3 {
+  font-size: 35px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.project_container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 40%;
+  text-align: center;
+  padding: 0 60px;
+}
+
+.project_container h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+.project_container p {
+  padding-bottom: 10px;
+}
+
+.project_blurb {
+  font-size: 18px;
+}
+.project_container span {
+  font-weight: bold;
+}
+
+.project_tech {
+  font-size: 15px;
+  font-style: italic;
+}
+.project_image {
+  height: 180px;
+  width: auto;
+  border:1px solid #383838;
+}

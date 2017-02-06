@@ -20509,7 +20509,7 @@ var About_me = React.createClass({
 
 module.exports = About_me;
 
-},{"./Personal_statement":185,"./Superhero":186,"react":178}],180:[function(require,module,exports){
+},{"./Personal_statement":188,"./Superhero":191,"react":178}],180:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -20517,6 +20517,9 @@ var Contact_details = require('./Contact_details');
 var Name_header = require('./Name_header');
 var About_me = require('./About_me');
 var Work_experience = require('./Work_experience');
+var Line = require('./Line');
+var Education = require('./Education');
+var Projects = require('./Projects');
 
 var App = React.createClass({
   displayName: 'App',
@@ -20528,14 +20531,17 @@ var App = React.createClass({
       React.createElement(Contact_details, null),
       React.createElement(Name_header, null),
       React.createElement(About_me, null),
-      React.createElement(Work_experience, null)
+      React.createElement(Work_experience, null),
+      React.createElement(Line, null),
+      React.createElement(Education, null),
+      React.createElement(Projects, null)
     );
   }
 });
 
 module.exports = App;
 
-},{"./About_me":179,"./Contact_details":181,"./Name_header":184,"./Work_experience":187,"react":178}],181:[function(require,module,exports){
+},{"./About_me":179,"./Contact_details":181,"./Education":182,"./Line":186,"./Name_header":187,"./Projects":190,"./Work_experience":192,"react":178}],181:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20560,7 +20566,7 @@ var Contact_details = React.createClass({
           ),
           React.createElement(
             "li",
-            null,
+            { className: "web_info_content" },
             React.createElement(
               "p",
               null,
@@ -20568,6 +20574,24 @@ var Contact_details = React.createClass({
                 "a",
                 { href: "http://www.jaimegunther.com" },
                 "www.jaimegunther.com"
+              )
+            ),
+            React.createElement(
+              "p",
+              null,
+              React.createElement(
+                "a",
+                { href: "http://www.linkedin.com/in/jaime-gunther" },
+                "linkedin.com/in/jaime-gunther"
+              )
+            ),
+            React.createElement(
+              "p",
+              null,
+              React.createElement(
+                "a",
+                { href: "http://www.github.com/Lupeman" },
+                "github.com/Lupeman"
               )
             )
           )
@@ -20628,17 +20652,44 @@ var Contact_details = React.createClass({
 module.exports = Contact_details;
 
 },{"react":178}],182:[function(require,module,exports){
+'use strict';
+
+var React = require('react');
+var Education_general_assembly = require('./Education_general_assembly.js');
+var Education_guelph = require('./Education_guelph');
+
+var Education = React.createClass({
+  displayName: 'Education',
+
+  render: function render() {
+    return React.createElement(
+      'div',
+      { className: 'education_container' },
+      React.createElement(
+        'h3',
+        null,
+        'Education'
+      ),
+      React.createElement(Education_general_assembly, null),
+      React.createElement(Education_guelph, null)
+    );
+  }
+});
+
+module.exports = Education;
+
+},{"./Education_general_assembly.js":183,"./Education_guelph":184,"react":178}],183:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
 
-var Job_msd = React.createClass({
-  displayName: "Job_msd",
+var Education_general_assembly = React.createClass({
+  displayName: "Education_general_assembly",
 
   render: function render() {
     return React.createElement(
       "div",
-      { className: "job_msd_container" },
+      { className: "general_assembly_container" },
       React.createElement(
         "table",
         null,
@@ -20647,84 +20698,34 @@ var Job_msd = React.createClass({
           null,
           React.createElement(
             "td",
-            null,
+            { className: "education_stats" },
             React.createElement(
               "h4",
               null,
-              "MSD"
+              "Web Development Immersive Course"
             ),
-            React.createElement(
-              "p",
-              { className: "job_stats" },
-              "Sales Representative"
-            ),
-            React.createElement(
-              "p",
-              { className: "job_stats" },
-              "April 2010 - November 2016"
-            )
-          ),
-          React.createElement(
-            "td",
-            null,
             React.createElement(
               "p",
               null,
-              "Independently managed a large territory of approximately 300 clients to ensure they were provided with accurate and up-to-date product information. I successfully launched two new products to market, worked with territory teammates to promote, organise and run Webinars, evening meetings and events on various topics within the industry."
+              "General Assembly"
+            ),
+            React.createElement(
+              "p",
+              null,
+              "Nov 2016 - Feb 2017"
             )
           )
-        )
-      )
-    );
-  }
-});
-
-module.exports = Job_msd;
-
-},{"react":178}],183:[function(require,module,exports){
-"use strict";
-
-var React = require('react');
-
-var Job_out_and_about_dogs = React.createClass({
-  displayName: "Job_out_and_about_dogs",
-
-  render: function render() {
-    return React.createElement(
-      "div",
-      { id: "job_out_and_about_dogs_container", className: "job_container" },
-      React.createElement(
-        "table",
-        null,
+        ),
         React.createElement(
           "tr",
           null,
           React.createElement(
             "td",
-            null,
-            React.createElement(
-              "h4",
-              null,
-              "Out & About Dogs"
-            ),
-            React.createElement(
-              "p",
-              { className: "job_stats" },
-              "Owner"
-            ),
-            React.createElement(
-              "p",
-              { className: "job_stats" },
-              "June 2007 - April 2010"
-            )
-          ),
-          React.createElement(
-            "td",
-            null,
+            { className: "education_blurb" },
             React.createElement(
               "p",
               null,
-              "Upon my arrival to Australia, I decided to create my own opportunity and started a dog walking and pet minding service. Using my previous experience working with animals and attempting to leverage my creativity and people skills to promote it, over the course of 3 years was able to build a sizeable client base of approximately 120."
+              "HTML5,CSS3/SASS, JavaScript,Ruby, Ruby on Rails, React/Redux, jQuery, Backbone.js, Node.js/Express.js,Sinatra, PostgreSQL, Git, Heroku, NPM, Gulp, Browserify, Bootstrap, Wordpress and Magento."
             )
           )
         )
@@ -20733,9 +20734,123 @@ var Job_out_and_about_dogs = React.createClass({
   }
 });
 
-module.exports = Job_out_and_about_dogs;
+module.exports = Education_general_assembly;
 
 },{"react":178}],184:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+
+var Education_guelph = React.createClass({
+  displayName: "Education_guelph",
+
+  render: function render() {
+    return React.createElement(
+      "div",
+      { className: "guelph_container" },
+      React.createElement(
+        "table",
+        null,
+        React.createElement(
+          "tr",
+          null,
+          React.createElement(
+            "td",
+            { className: "education_stats" },
+            React.createElement(
+              "h4",
+              null,
+              "HBSc Zoology"
+            ),
+            React.createElement(
+              "p",
+              null,
+              "University of Guelph - CANADA"
+            ),
+            React.createElement(
+              "p",
+              null,
+              "Sep 1999 - April 2003"
+            )
+          )
+        )
+      )
+    );
+  }
+});
+
+module.exports = Education_guelph;
+
+},{"react":178}],185:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+
+var Job = React.createClass({
+  displayName: "Job",
+
+  render: function render() {
+    return React.createElement(
+      "div",
+      { className: "job_container" },
+      React.createElement("img", { className: "company_logo", src: this.props.image, alt: "company_logo" }),
+      React.createElement(
+        "div",
+        { className: "job_stats" },
+        React.createElement(
+          "h4",
+          null,
+          this.props.company
+        ),
+        React.createElement(
+          "p",
+          null,
+          this.props.position
+        ),
+        React.createElement(
+          "p",
+          null,
+          this.props.start_date,
+          " - ",
+          this.props.end_date
+        )
+      ),
+      React.createElement(
+        "div",
+        { className: "job_blurb" },
+        React.createElement(
+          "p",
+          null,
+          this.props.about
+        )
+      )
+    );
+  }
+});
+
+module.exports = Job;
+
+},{"react":178}],186:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+
+var Line = React.createClass({
+  displayName: "Line",
+
+  render: function render() {
+    return React.createElement(
+      "div",
+      { className: "vertical_line_container" },
+      React.createElement("div", { className: "vertical_line" }),
+      React.createElement("img", { className: "chevron", src: "/images/chevron.png" })
+    );
+  }
+});
+
+module.exports = Line;
+
+},{"react":178}],187:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20763,7 +20878,7 @@ var Name_header = React.createClass({
 
 module.exports = Name_header;
 
-},{"react":178}],185:[function(require,module,exports){
+},{"react":178}],188:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20775,9 +20890,7 @@ var Personal_statement = React.createClass({
     return React.createElement(
       "div",
       { className: "personal_statement_container" },
-      "// ",
-      React.createElement("div", { className: "circle" }),
-      React.createElement("img", { className: "image", src: "/images/woman3.png" }),
+      React.createElement("img", { className: "image_me", src: "/images/jaime3.jpg" }),
       React.createElement(
         "div",
         { className: "quote" },
@@ -20798,7 +20911,13 @@ var Personal_statement = React.createClass({
         React.createElement(
           "p",
           null,
-          "I have spoken to crowds, engaged in technical discussions with physicians, lead groups and fostered others, managed a business and created a successful brand. I live my life to the motto of \u201CWhy not?\u201D and believe that pragmatism and a sense of adventure can dynamically coexist. My creativity spurs me to constantly be thinking of new ideas and ways to bring them to life."
+          "I have spoken to crowds, engaged in technical discussions with physicians, lead groups and fostered others, managed a business and created a successful brand. I live my life to the motto of ",
+          React.createElement(
+            "span",
+            null,
+            "\u201CWhy not?\u201D"
+          ),
+          " and believe that pragmatism and a sense of adventure can dynamically coexist. My creativity spurs me to constantly be thinking of new ideas and ways to bring them to life."
         )
       )
     );
@@ -20807,7 +20926,129 @@ var Personal_statement = React.createClass({
 
 module.exports = Personal_statement;
 
-},{"react":178}],186:[function(require,module,exports){
+},{"react":178}],189:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+
+var Project = React.createClass({
+  displayName: "Project",
+
+  render: function render() {
+    return React.createElement(
+      "div",
+      { className: "project_container" },
+      React.createElement(
+        "h4",
+        null,
+        this.props.title
+      ),
+      React.createElement(
+        "p",
+        { className: "project_blurb" },
+        this.props.description
+      ),
+      React.createElement(
+        "a",
+        { href: this.props.project_url },
+        React.createElement("img", { className: "project_image", src: this.props.image, alt: "project_image" })
+      ),
+      React.createElement(
+        "p",
+        { className: "project_tech" },
+        React.createElement(
+          "span",
+          null,
+          "Technologies used: "
+        ),
+        this.props.technologies
+      )
+    );
+  }
+});
+
+module.exports = Project;
+
+},{"react":178}],190:[function(require,module,exports){
+'use strict';
+
+var React = require('react');
+var Project = require('./Project');
+
+var Projects = React.createClass({
+  displayName: 'Projects',
+
+  getInitialState: function getInitialState() {
+    return {
+      data: [{
+        'title': 'Memory Game',
+        'description': 'Prior to starting the course we were tasked with making a simple memory card game.',
+        'url': 'https://github.com/Lupeman/wdi-fundamentals-memorygame',
+        'image': 'images/memory_game_project.png',
+        'technologies': 'HTML5, CSS, Bootstrap.'
+      }, {
+        'title': 'Food Sort',
+        'description': 'As an alternative to Tic Tac Toe, I decided to challenge myself and create an app for 4 year old (who I have been starting to teach concepts of coding). I created the Food Sort Game which required the user to drag the correct food item into the appropriate basket. I also performed a data migration.',
+        'url': 'https://github.com/Lupeman/what-where-project',
+        'image': 'images/food_sort_project.png',
+        'technologies': 'HTML5, CSS, JavaScript.'
+      }, {
+        'title': 'Mynsta',
+        'description': 'Mynsta has the potential to allow users to authenticate with Instagram and then create personalised Google search engines based on those people they follow that have associated blogs. This idea came from being frustrated not being able to search for recipes specifically for those blogs I was interested in.',
+        'url': 'https://github.com/Lupeman/mynsta',
+        'image': 'images/mynsta_project.png',
+        'technologies': 'HTML5, CSS, JavaScript, Ruby, Sinatra, implemented OATH with Instagram.'
+      }, {
+        'title': 'Helping Hands',
+        'description': 'Helping Hands is an application that aims to connect people and charities online. Charities create a wish list of items that their charity needs and users may filter charities to donate to based on location and cause',
+        'url': 'https://github.com/Lupeman/charity_helpCharity',
+        'image': 'images/helping_hands.png',
+        'technologies': 'HTML5, CSS, SASS, JavaScript, Ruby, Ruby on Rails, Bootstrap, AWS Carrier Wave, Handlebars.Js, Backbone.Js, Git, Trello.'
+      }, {
+        'title': 'WDI Conf 2017',
+        'description': 'A mock conference website for the WDI class. Users are able to look up conference details, including individual speaker info and purchase tickets. Additionally, a chatbot is able to answer basic information about the conference.',
+        'url': 'https://github.com/Lupeman/WDI_Conf',
+        'image': 'images/WDI_conf.png',
+        'technologies': 'HTML, CSS, SASS, Bootstrap, EventBrite, JavaScript, Node.js, Express.js, Wit.Ai, Socket.io, Git'
+      }, {
+        'title': 'Greenfields HR',
+        'description': 'A revamp on an actual site made for a freelance client.',
+        'url': 'https://www.greenfieldshr.com.au',
+        'image': 'images/greenfieldshr.png',
+        'technologies': 'Wordpress'
+      }, {
+        'title': 'Everybodi',
+        'description': 'Commissioned to create an e-commerce site for a freelance client.',
+        'url': 'https://www.everybodi.co',
+        'image': 'images/everybodi.png',
+        'technologies': 'Zoey - a Magento CMS platform'
+      }]
+    };
+  },
+
+  render: function render() {
+    return React.createElement(
+      'div',
+      { className: 'projects' },
+      React.createElement(
+        'h3',
+        null,
+        'Projects'
+      ),
+      React.createElement(
+        'div',
+        { className: 'projects_container' },
+        this.state.data.map(function (project) {
+          return React.createElement(Project, { title: project.title, description: project.description, project_url: project.url, image: project.image, technologies: project.technologies });
+        })
+      )
+    );
+  }
+});
+
+module.exports = Projects;
+
+},{"./Project":189,"react":178}],191:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20827,29 +21068,64 @@ var Superhero = React.createClass({
 
 module.exports = Superhero;
 
-},{"react":178}],187:[function(require,module,exports){
+},{"react":178}],192:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
-var Job_msd = require('./Job_msd');
-var Job_out_and_about_dogs = require('./Job_out_and_about_dogs');
+var Job = require('./Job');
 
 var Work_experience = React.createClass({
   displayName: 'Work_experience',
 
+  getInitialState: function getInitialState() {
+    return {
+      data: [{
+        'company': 'MSD',
+        'position': 'Sales Representative',
+        'start_date': 'April 2010',
+        'end_date': 'Nov 2016',
+        'image': 'images/msd-logo.png',
+        'about': 'Independently managed a large territory of approximately 300 clients to ensure they were provided with accurate and up-to-date product information. I successfully launched two new products to market, worked with territory teammates to promote, organise and run Webinars, evening meetings and events on various topics within the industry. I am able to engage in technical product discussions and maintain ongoing professional relationships with clients.'
+      }, {
+        'company': 'Out & About Dogs',
+        'position': 'Owner',
+        'start_date': 'June 2007',
+        'end_date': 'April 2010',
+        'image': 'images/out_and_about_dogs.jpeg',
+        'about': 'Upon my arrival to Australia, I decided to create my own opportunity and started a dog walking and pet minding service. Using my previous experience working with animals and attempting to leverage my creativity and people skills to promote it, over the course of 3 years was able to build a sizeable client base of approximately 120.'
+      }, {
+        'company': 'Complete Med Communications',
+        'position': 'Project Manager',
+        'start_date': 'Oct 2005',
+        'end_date': 'June 2006',
+        'image': 'images/CMC-logo.png',
+        'about': 'Aided in the development of nation-wide physician medical education programs. Responsible for event planning, onsite logistics, development of conference materials, invoice reconciliation, summary of events.'
+      }]
+    };
+  },
   render: function render() {
     return React.createElement(
       'div',
-      { className: 'work_experience_container' },
-      React.createElement(Job_msd, null),
-      React.createElement(Job_out_and_about_dogs, null)
+      { className: 'work_experience' },
+      React.createElement(
+        'h3',
+        null,
+        'Work Experience'
+      ),
+      React.createElement(
+        'div',
+        { className: 'work_experience_container' },
+        this.state.data.map(function (job) {
+          return React.createElement(Job, { company: job.company, position: job.position, start_date: job.start_date, end_date: job.end_date, image: job.image, about: job.about });
+        })
+      )
     );
   }
 });
 
 module.exports = Work_experience;
 
-},{"./Job_msd":182,"./Job_out_and_about_dogs":183,"react":178}],188:[function(require,module,exports){
+},{"./Job":185,"react":178}],193:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -20858,4 +21134,4 @@ var App = require('./App');
 
 ReactDOM.render(React.createElement(App, null), document.getElementById('root'));
 
-},{"./App":180,"react":178,"react-dom":25}]},{},[188]);
+},{"./App":180,"react":178,"react-dom":25}]},{},[193]);

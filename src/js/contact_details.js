@@ -8,8 +8,10 @@ var Contact_details = React.createClass({
           <ul>
             <li>
               <img id="website" src="images/browser.png" alt="portfolio_site_icon" /></li>
-            <li>
+            <li className="web_info_content">
               <p><a href="http://www.jaimegunther.com">www.jaimegunther.com</a></p>
+              <p><a href="http://www.linkedin.com/in/jaime-gunther">linkedin.com/in/jaime-gunther</a></p>
+              <p><a href="http://www.github.com/Lupeman">github.com/Lupeman</a></p>
             </li>
           </ul>
         </div>
