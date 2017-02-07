@@ -20980,7 +20980,7 @@ var Projects = React.createClass({
         'description': 'Commissioned to create an e-commerce site for a freelance client.',
         'url': 'https://www.everybodi.co',
         'image': 'app/images/everybodi.png',
-        'technologies': 'Zoey - a Magento CMS platform'
+        'technologies': 'Zoey - a Magento platform'
       }]
     };
   },
