@@ -15,7 +15,7 @@ var Projects = React.createClass({
           },
           {
           'title': 'Food Sort',
-          'description': 'As an alternative to Tic Tac Toe, I decided to challenge myself and create an app for 4 year old (who I have been starting to teach concepts of coding). I created the Food Sort Game which required the user to drag the correct food item into the appropriate basket. I also performed a data migration.',
+          'description': 'As an alternative to the Tic Tac Toe project, I decided to challenge myself and create an app for my 4 year old (who I have been starting to teach the concepts of coding). I created the Food Sort Game which required the user to drag the correct food item into the appropriate basket. I also performed a data migration.',
           'url': 'https://github.com/Lupeman/what-where-project',
           'image': '/app/images/food_sort_project.png',
           'technologies': 'HTML5, CSS, JavaScript.'

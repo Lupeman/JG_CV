@@ -7,7 +7,7 @@ var Contact_details = React.createClass({
         <div className="website">
           <ul>
             <li>
-              <img id="website" src="/app/images/browser.png" alt="portfolio_site_icon" /></li>
+              <img id="website" src="/Users/jaimegunther/JG_2017_CV/app/images/browser.png" alt="portfolio_site_icon" /></li>
             <li className="web_info_content">
               <p><a href="http://www.jaimegunther.com">www.jaimegunther.com</a></p>
               <p><a href="http://www.linkedin.com/in/jaime-gunther">linkedin.com/in/jaime-gunther</a></p>
