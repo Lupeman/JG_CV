@@ -4,7 +4,7 @@ var Personal_statement = React.createClass({
   render: function(){
     return(
       <div className="personal_statement_container">
-      <img className="image_me" src="/app/images/jaime3.jpg" />
+      <img className="image_me" src="app/images/jaime3.jpg" />
         <div className="quote">
           <p>
             “I am an ideas person new to the development world and as such looking for a team to help guide me, in exchange so that I might provide meaningful content.”
