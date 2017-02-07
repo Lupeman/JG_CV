@@ -20961,7 +20961,7 @@ var Projects = React.createClass({
         'title': 'Helping Hands',
         'description': 'Helping Hands is an application that aims to connect people and charities online. Charities create a wish list of items that their charity needs and users may filter charities to donate to based on location and cause',
         'url': 'https://github.com/Lupeman/charity_helpCharity',
-        'image': 'app/images/helping_hands.png',
+        'image': 'app/images/helping-hands.png',
         'technologies': 'HTML5, CSS, SASS, JavaScript, Ruby, Ruby on Rails, Bootstrap, AWS Carrier Wave, Handlebars.Js, Backbone.Js, Git, Trello.'
       }, {
         'title': 'WDI Conf 2017',
