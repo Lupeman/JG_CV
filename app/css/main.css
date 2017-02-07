@@ -157,7 +157,7 @@ div.contact_details_container ul li {
   text-align: right;
   padding-right: 10px; }
 
-.work_experience h3, .education_container h3 {
+.work_experience h3, .education h3 {
   font-size: 30px; }
 
 .job_container {
@@ -201,13 +201,13 @@ div.contact_details_container ul li {
   width: auto;
   padding: 10px; }
 
-.education_container {
+.education {
   display: flex;
   width: 45%;
   flex-direction: column;
   text-align: left; }
 
-.education_container h4 {
+.school_container h4 {
   font-size: 25px;
   font-weight: bold; }
 
@@ -263,3 +263,60 @@ div.contact_details_container ul li {
   height: 180px;
   width: auto;
   border: 1px solid #383838; }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .contact_details_container {
+    flex-direction: column;
+    text-align: center; }
+    .contact_details_container p {
+      text-align: left;
+      padding-right: 25px; }
+    .contact_details_container .mobile {
+      display: flex;
+      align-content: space-around; }
+      .contact_details_container .mobile p {
+        padding-left: 10px; }
+  .personal_statement_container .image_me {
+    margin: 0 auto; }
+  .personal_statement_container .quote {
+    font-size: 20px;
+    width: 100%;
+    text-align: center; }
+  .personal_statement_container .body-text {
+    font-size: 15px;
+    width: 100%;
+    text-align: center; }
+  .personal_statement_container .body-text span {
+    font-size: 18px; }
+  .vertical_line_container {
+    display: none; }
+  div.work_experience, div.education, div.projects {
+    display: flex;
+    width: 100%;
+    align-content: center; }
+  .work_experience h3, .education h3, .projects h3 {
+    font-size: 22px;
+    text-align: center;
+    margin: 15px auto;
+    text-decoration: underline;
+    color: #fbb657; }
+  .work_experience .company_logo {
+    height: 40px;
+    margin: 15px auto 10px; }
+  .job_container, .school_container, .project_container {
+    flex-direction: column; }
+  .work_experience .job_stats, .education .school_stats {
+    font-size: 18px;
+    text-align: center; }
+  .work_experience .job_blurb, .education .education_blurb {
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #383838; }
+  .projects {
+    display: flex;
+    flex-wrap: wrap; }
+    .projects .project_container {
+      width: 100%;
+      padding: 0; }
+    .projects p {
+      font-size: 15px; } }

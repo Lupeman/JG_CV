@@ -1,5 +1,4 @@
 var React = require('react');
-var Superhero = require('./Superhero');
 var Personal_statement = require('./Personal_statement');
 
 

@@ -31,7 +31,7 @@ var Contact_details = React.createClass({
               <img id="email" src="images/email.png" alt="email icon" />
             </li>
             <li>
-            <p><a href="mailto:jaimegunther@hotmail.com">jaimegunther@hotmail.com</a></p>
+            <p><a href="mailto:contact@jaimegunther.com">contact@jaimegunther.com</a></p>
             </li>
           </ul>
         </div>

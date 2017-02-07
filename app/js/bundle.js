@@ -20492,7 +20492,6 @@ module.exports = require('./lib/React');
 'use strict';
 
 var React = require('react');
-var Superhero = require('./Superhero');
 var Personal_statement = require('./Personal_statement');
 
 var About_me = React.createClass({
@@ -20509,7 +20508,7 @@ var About_me = React.createClass({
 
 module.exports = About_me;
 
-},{"./Personal_statement":188,"./Superhero":191,"react":178}],180:[function(require,module,exports){
+},{"./Personal_statement":186,"react":178}],180:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -20541,7 +20540,7 @@ var App = React.createClass({
 
 module.exports = App;
 
-},{"./About_me":179,"./Contact_details":181,"./Education":182,"./Line":186,"./Name_header":187,"./Projects":190,"./Work_experience":192,"react":178}],181:[function(require,module,exports){
+},{"./About_me":179,"./Contact_details":181,"./Education":182,"./Line":184,"./Name_header":185,"./Projects":188,"./Work_experience":190,"react":178}],181:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20638,8 +20637,8 @@ var Contact_details = React.createClass({
               null,
               React.createElement(
                 "a",
-                { href: "mailto:jaimegunther@hotmail.com" },
-                "jaimegunther@hotmail.com"
+                { href: "mailto:contact@jaimegunther.com" },
+                "contact@jaimegunther.com"
               )
             )
           )
@@ -20655,133 +20654,52 @@ module.exports = Contact_details;
 'use strict';
 
 var React = require('react');
-var Education_general_assembly = require('./Education_general_assembly.js');
-var Education_guelph = require('./Education_guelph');
+var School = require('./School');
 
 var Education = React.createClass({
   displayName: 'Education',
 
+  getInitialState: function getInitialState() {
+    return {
+      data: [{
+        'course': 'Web Development Immersive',
+        'name': 'General Assembly Melbourne',
+        'start_date': 'Nov 2016',
+        'end_date': 'Feb 2017',
+        'tech': 'HTML5,CSS3/SASS, JavaScript,Ruby, Ruby on Rails, React/Redux, jQuery, Backbone.js, Node.js/Express.js,Sinatra, PostgreSQL, Git, Heroku, NPM, Gulp, Browserify, Bootstrap, Wordpress and Magento.'
+      }, {
+        'course': 'HBSc Zoology',
+        'name': 'University of Guelph - CANADA',
+        'start_date': 'Sept 1999',
+        'end_date': 'Apr 2003',
+        'tech': ''
+      }]
+    };
+  },
+
   render: function render() {
     return React.createElement(
       'div',
-      { className: 'education_container' },
+      { className: 'education' },
       React.createElement(
         'h3',
         null,
         'Education'
       ),
-      React.createElement(Education_general_assembly, null),
-      React.createElement(Education_guelph, null)
+      React.createElement(
+        'div',
+        { className: 'education_container' },
+        this.state.data.map(function (school) {
+          return React.createElement(School, { course: school.course, name: school.name, start_date: school.start_date, end_date: school.end_date, tech: school.tech });
+        })
+      )
     );
   }
 });
 
 module.exports = Education;
 
-},{"./Education_general_assembly.js":183,"./Education_guelph":184,"react":178}],183:[function(require,module,exports){
-"use strict";
-
-var React = require('react');
-
-var Education_general_assembly = React.createClass({
-  displayName: "Education_general_assembly",
-
-  render: function render() {
-    return React.createElement(
-      "div",
-      { className: "general_assembly_container" },
-      React.createElement(
-        "table",
-        null,
-        React.createElement(
-          "tr",
-          null,
-          React.createElement(
-            "td",
-            { className: "education_stats" },
-            React.createElement(
-              "h4",
-              null,
-              "Web Development Immersive Course"
-            ),
-            React.createElement(
-              "p",
-              null,
-              "General Assembly"
-            ),
-            React.createElement(
-              "p",
-              null,
-              "Nov 2016 - Feb 2017"
-            )
-          )
-        ),
-        React.createElement(
-          "tr",
-          null,
-          React.createElement(
-            "td",
-            { className: "education_blurb" },
-            React.createElement(
-              "p",
-              null,
-              "HTML5,CSS3/SASS, JavaScript,Ruby, Ruby on Rails, React/Redux, jQuery, Backbone.js, Node.js/Express.js,Sinatra, PostgreSQL, Git, Heroku, NPM, Gulp, Browserify, Bootstrap, Wordpress and Magento."
-            )
-          )
-        )
-      )
-    );
-  }
-});
-
-module.exports = Education_general_assembly;
-
-},{"react":178}],184:[function(require,module,exports){
-"use strict";
-
-var React = require('react');
-
-var Education_guelph = React.createClass({
-  displayName: "Education_guelph",
-
-  render: function render() {
-    return React.createElement(
-      "div",
-      { className: "guelph_container" },
-      React.createElement(
-        "table",
-        null,
-        React.createElement(
-          "tr",
-          null,
-          React.createElement(
-            "td",
-            { className: "education_stats" },
-            React.createElement(
-              "h4",
-              null,
-              "HBSc Zoology"
-            ),
-            React.createElement(
-              "p",
-              null,
-              "University of Guelph - CANADA"
-            ),
-            React.createElement(
-              "p",
-              null,
-              "Sep 1999 - April 2003"
-            )
-          )
-        )
-      )
-    );
-  }
-});
-
-module.exports = Education_guelph;
-
-},{"react":178}],185:[function(require,module,exports){
+},{"./School":189,"react":178}],183:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20830,7 +20748,7 @@ var Job = React.createClass({
 
 module.exports = Job;
 
-},{"react":178}],186:[function(require,module,exports){
+},{"react":178}],184:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20850,7 +20768,7 @@ var Line = React.createClass({
 
 module.exports = Line;
 
-},{"react":178}],187:[function(require,module,exports){
+},{"react":178}],185:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20878,7 +20796,7 @@ var Name_header = React.createClass({
 
 module.exports = Name_header;
 
-},{"react":178}],188:[function(require,module,exports){
+},{"react":178}],186:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20926,7 +20844,7 @@ var Personal_statement = React.createClass({
 
 module.exports = Personal_statement;
 
-},{"react":178}],189:[function(require,module,exports){
+},{"react":178}],187:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20969,7 +20887,7 @@ var Project = React.createClass({
 
 module.exports = Project;
 
-},{"react":178}],190:[function(require,module,exports){
+},{"react":178}],188:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -21048,27 +20966,55 @@ var Projects = React.createClass({
 
 module.exports = Projects;
 
-},{"./Project":189,"react":178}],191:[function(require,module,exports){
+},{"./Project":187,"react":178}],189:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
 
-var Superhero = React.createClass({
-  displayName: "Superhero",
+var School = React.createClass({
+  displayName: "School",
 
   render: function render() {
     return React.createElement(
       "div",
-      { className: "superhero_container" },
-      React.createElement("img", { className: "cape", src: "images/cape.png", alt: "superhero cape" }),
-      React.createElement("img", { className: "superhero", src: "images/superhero.png", alt: "superhero image" })
+      { className: "school_container" },
+      React.createElement(
+        "div",
+        { className: "school_stats" },
+        React.createElement(
+          "h4",
+          null,
+          this.props.course
+        ),
+        React.createElement(
+          "p",
+          null,
+          this.props.name
+        ),
+        React.createElement(
+          "p",
+          null,
+          this.props.start_date,
+          " - ",
+          this.props.end_date
+        )
+      ),
+      React.createElement(
+        "div",
+        { className: "education_blurb" },
+        React.createElement(
+          "p",
+          null,
+          this.props.tech
+        )
+      )
     );
   }
 });
 
-module.exports = Superhero;
+module.exports = School;
 
-},{"react":178}],192:[function(require,module,exports){
+},{"react":178}],190:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -21125,7 +21071,7 @@ var Work_experience = React.createClass({
 
 module.exports = Work_experience;
 
-},{"./Job":185,"react":178}],193:[function(require,module,exports){
+},{"./Job":183,"react":178}],191:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -21134,4 +21080,4 @@ var App = require('./App');
 
 ReactDOM.render(React.createElement(App, null), document.getElementById('root'));
 
-},{"./App":180,"react":178,"react-dom":25}]},{},[193]);
+},{"./App":180,"react":178,"react-dom":25}]},{},[191]);
