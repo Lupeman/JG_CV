@@ -5,7 +5,7 @@ var Line = React.createClass({
     return (
       <div className="vertical_line_container">
         <div className="vertical_line"></div>
-        <img className="chevron" src="/images/chevron.png" />
+        <img className="chevron" src="/app/images/chevron.png" />
       </div>
     );
   }

@@ -358,4 +358,6 @@ div.contact_details_container ul li {
   .scale-skills {
     width: 300px;
     padding-top: 30px;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+  .footer_container p {
+    font-size: 15px; } }

@@ -321,7 +321,7 @@ div.contact_details_container ul li {
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-top: 30px; 
+  margin-top: 30px;
 }
 .footer_container a {
   text-decoration: none;
@@ -443,5 +443,9 @@ div.contact_details_container ul li {
         width: 300px;
         padding-top: 30px;
         margin: 0 auto;
+      }
+
+      .footer_container p {
+        font-size: 15px;
       }
     }
