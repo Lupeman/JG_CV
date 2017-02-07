@@ -20508,7 +20508,7 @@ var About_me = React.createClass({
 
 module.exports = About_me;
 
-},{"./Personal_statement":186,"react":178}],180:[function(require,module,exports){
+},{"./Personal_statement":187,"react":178}],180:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -20519,6 +20519,7 @@ var Work_experience = require('./Work_experience');
 var Line = require('./Line');
 var Education = require('./Education');
 var Projects = require('./Projects');
+var Footer = require('./Footer');
 
 var App = React.createClass({
   displayName: 'App',
@@ -20533,14 +20534,15 @@ var App = React.createClass({
       React.createElement(Work_experience, null),
       React.createElement(Line, null),
       React.createElement(Education, null),
-      React.createElement(Projects, null)
+      React.createElement(Projects, null),
+      React.createElement(Footer, null)
     );
   }
 });
 
 module.exports = App;
 
-},{"./About_me":179,"./Contact_details":181,"./Education":182,"./Line":184,"./Name_header":185,"./Projects":188,"./Work_experience":190,"react":178}],181:[function(require,module,exports){
+},{"./About_me":179,"./Contact_details":181,"./Education":182,"./Footer":183,"./Line":185,"./Name_header":186,"./Projects":189,"./Work_experience":191,"react":178}],181:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20692,14 +20694,49 @@ var Education = React.createClass({
         this.state.data.map(function (school) {
           return React.createElement(School, { course: school.course, name: school.name, start_date: school.start_date, end_date: school.end_date, tech: school.tech });
         })
-      )
+      ),
+      React.createElement(
+        'h3',
+        { className: 'relevant-skills' },
+        'Relevant Skills'
+      ),
+      React.createElement('img', { className: 'scale-skills', src: 'images/skills-graph.png', alt: 'image of skill levels' })
     );
   }
 });
 
 module.exports = Education;
 
-},{"./School":189,"react":178}],183:[function(require,module,exports){
+},{"./School":190,"react":178}],183:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+
+var Footer = React.createClass({
+  displayName: "Footer",
+
+  render: function render() {
+    return React.createElement(
+      "div",
+      { className: "footer_container" },
+      React.createElement(
+        "p",
+        null,
+        "\xA9 ",
+        React.createElement(
+          "a",
+          { href: "http://www.jaimegunther.com" },
+          "jaimegunther.com"
+        ),
+        " ~ Made just for you using React.js and Flexbox."
+      )
+    );
+  }
+});
+
+module.exports = Footer;
+
+},{"react":178}],184:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20748,7 +20785,7 @@ var Job = React.createClass({
 
 module.exports = Job;
 
-},{"react":178}],184:[function(require,module,exports){
+},{"react":178}],185:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20768,7 +20805,7 @@ var Line = React.createClass({
 
 module.exports = Line;
 
-},{"react":178}],185:[function(require,module,exports){
+},{"react":178}],186:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20796,7 +20833,7 @@ var Name_header = React.createClass({
 
 module.exports = Name_header;
 
-},{"react":178}],186:[function(require,module,exports){
+},{"react":178}],187:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20844,7 +20881,7 @@ var Personal_statement = React.createClass({
 
 module.exports = Personal_statement;
 
-},{"react":178}],187:[function(require,module,exports){
+},{"react":178}],188:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -20857,19 +20894,23 @@ var Project = React.createClass({
       "div",
       { className: "project_container" },
       React.createElement(
-        "h4",
-        null,
-        this.props.title
-      ),
-      React.createElement(
-        "p",
-        { className: "project_blurb" },
-        this.props.description
-      ),
-      React.createElement(
-        "a",
-        { href: this.props.project_url },
-        React.createElement("img", { className: "project_image", src: this.props.image, alt: "project_image" })
+        "div",
+        { className: "project_stats" },
+        React.createElement(
+          "h4",
+          null,
+          this.props.title
+        ),
+        React.createElement(
+          "p",
+          { className: "project_blurb" },
+          this.props.description
+        ),
+        React.createElement(
+          "a",
+          { href: this.props.project_url },
+          React.createElement("img", { className: "project_image", src: this.props.image, alt: "project_image" })
+        )
       ),
       React.createElement(
         "p",
@@ -20887,7 +20928,7 @@ var Project = React.createClass({
 
 module.exports = Project;
 
-},{"react":178}],188:[function(require,module,exports){
+},{"react":178}],189:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -20966,7 +21007,7 @@ var Projects = React.createClass({
 
 module.exports = Projects;
 
-},{"./Project":187,"react":178}],189:[function(require,module,exports){
+},{"./Project":188,"react":178}],190:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -21014,7 +21055,7 @@ var School = React.createClass({
 
 module.exports = School;
 
-},{"react":178}],190:[function(require,module,exports){
+},{"react":178}],191:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -21071,7 +21112,7 @@ var Work_experience = React.createClass({
 
 module.exports = Work_experience;
 
-},{"./Job":183,"react":178}],191:[function(require,module,exports){
+},{"./Job":184,"react":178}],192:[function(require,module,exports){
 'use strict';
 
 var React = require('react');
@@ -21080,4 +21121,4 @@ var App = require('./App');
 
 ReactDOM.render(React.createElement(App, null), document.getElementById('root'));
 
-},{"./App":180,"react":178,"react-dom":25}]},{},[191]);
+},{"./App":180,"react":178,"react-dom":25}]},{},[192]);

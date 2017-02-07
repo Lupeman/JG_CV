@@ -33,6 +33,8 @@ var Education = React.createClass({
             return <School course={school.course} name={school.name} start_date={school.start_date} end_date={school.end_date} tech={school.tech} />
           })}
         </div>
+        <h3 className="relevant-skills">Relevant Skills</h3>
+        <img className="scale-skills" src="images/skills-graph.png" alt="image of skill levels" />
       </div>
     );
   }

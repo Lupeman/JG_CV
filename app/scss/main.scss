@@ -213,7 +213,7 @@ div.contact_details_container ul li {
 
 .vertical_line {
   width:8px;
-  height:920px;
+  height:950px;
   background-color: #fbb657;
   margin-top: 20px;
   margin:0 10px;
@@ -257,6 +257,14 @@ div.contact_details_container ul li {
   line-height: 15px;
   padding:5px 0;
   margin: 0;
+}
+
+.relevant-skills {
+  margin-top: -20px;
+}
+.scale-skills {
+  height: auto;
+  width: 400px;
 }
 
 .projects_container {
@@ -309,23 +317,40 @@ div.contact_details_container ul li {
   border:1px solid #383838;
 }
 
+.footer_container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 30px; 
+}
+.footer_container a {
+  text-decoration: none;
+  color: #383838;
+}
+
+.footer_container a:hover {
+  color: #50d1ee;
+}
+
 @media screen
   and (min-width: 320px)
-  and (max-width: 480px) {
+  and (max-width: 1079px) {
 
     .contact_details_container {
-      flex-direction: column;
+      flex-direction: row;
       text-align: center;
+      ul {
+        padding: 5px 0;
+        margin: auto 0;
+      }
       p {
         text-align: left;
+        font-size: 12px;
         padding-right: 25px;
       }
       .mobile {
         display: flex;
         align-content: space-around;
-        p {
-          padding-left: 10px;
-        }
       }
     }
 
@@ -357,9 +382,9 @@ div.contact_details_container ul li {
       align-content: center;
     }
     .work_experience h3, .education h3, .projects h3 {
-      font-size: 22px;
+      font-size: 28px;
       text-align: center;
-      margin: 15px auto;
+      margin: 30px auto 10px;;
       text-decoration: underline;
       color: #fbb657;
     }
@@ -380,6 +405,11 @@ div.contact_details_container ul li {
       padding-bottom: 10px;
       border-bottom: 1px solid #383838;
     }
+
+    .scale-skills {
+      padding-top: 30px;
+      margin: 0 auto;
+    }
     .projects {
       display: flex;
       flex-wrap: wrap;
@@ -392,3 +422,26 @@ div.contact_details_container ul li {
       }
     }
   }
+
+
+  @media screen
+    and (min-width: 320px)
+    and (max-width: 844px) {
+
+      div.contact_details_container {
+        flex-direction: column;
+        width: 100vw;
+        padding-top: 10px;
+        align-items: center;
+        justify-content: center;
+          p {
+            text-align: center;
+          }
+      }
+
+      .scale-skills {
+        width: 300px;
+        padding-top: 30px;
+        margin: 0 auto;
+      }
+    }

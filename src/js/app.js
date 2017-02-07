@@ -6,6 +6,7 @@ var Work_experience = require('./Work_experience');
 var Line = require('./Line');
 var Education = require('./Education');
 var Projects = require('./Projects');
+var Footer = require('./Footer');
 
 var App = React.createClass({
   render: function(){
@@ -18,6 +19,7 @@ var App = React.createClass({
         <Line />
         <Education />
         <Projects />
+        <Footer />
       </div>
     );
   }
