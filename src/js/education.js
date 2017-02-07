@@ -34,7 +34,7 @@ var Education = React.createClass({
           })}
         </div>
         <h3 className="relevant-skills">Relevant Skills</h3>
-        <img className="scale-skills" src="app/images//skills-graph.png" alt="image of skill levels" />
+        <img className="scale-skills" src="/app/images/skills-graph.png" alt="image of skill levels" />
       </div>
     );
   }
